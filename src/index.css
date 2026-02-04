@@ -2,27 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 234 16% 15%;
+    --background: 152 30% 98%;
+    --foreground: 152 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 234 16% 15%;
+    --card-foreground: 152 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 234 16% 15%;
+    --popover-foreground: 152 25% 10%;
 
-    --primary: 239 84% 58%;
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 263 70% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 152 20% 96%;
+    --secondary-foreground: 152 25% 20%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 152 15% 95%;
+    --muted-foreground: 152 10% 45%;
 
-    --accent: 263 70% 50%;
+    --accent: 160 70% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,81 +36,73 @@
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 239 84% 67%;
+    --border: 152 15% 88%;
+    --input: 152 15% 88%;
+    --ring: 160 84% 45%;
 
     --radius: 0.75rem;
 
-    /* Yield rating colors */
-    --yield-excellent: 160 84% 39%;
-    --yield-good: 142 71% 45%;
-    --yield-ok: 48 96% 53%;
-    --yield-weak: 38 92% 50%;
-    --yield-bad: 0 84% 60%;
+    --gradient-hero: linear-gradient(135deg, hsl(152, 30%, 97%) 0%, hsl(0, 0%, 100%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(160, 84%, 39%) 0%, hsl(160, 70%, 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(152, 20%, 99%) 100%);
 
-    /* Gradient */
-    --gradient-primary: linear-gradient(135deg, hsl(239, 84%, 67%) 0%, hsl(263, 70%, 50%) 100%);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 239 84% 67%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 152 25% 20%;
+    --sidebar-primary: 160 84% 39%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 239 84% 67%;
+    --sidebar-accent: 152 20% 96%;
+    --sidebar-accent-foreground: 152 25% 20%;
+    --sidebar-border: 152 15% 90%;
+    --sidebar-ring: 160 84% 45%;
   }
 
   .dark {
-    --background: 234 16% 10%;
-    --foreground: 0 0% 98%;
+    --background: 152 20% 8%;
+    --foreground: 152 10% 98%;
 
-    --card: 234 16% 13%;
-    --card-foreground: 0 0% 98%;
+    --card: 152 20% 12%;
+    --card-foreground: 152 10% 98%;
 
-    --popover: 234 16% 13%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 152 20% 12%;
+    --popover-foreground: 152 10% 98%;
 
-    --primary: 239 84% 58%;
+    --primary: 160 84% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 263 70% 55%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 152 20% 18%;
+    --secondary-foreground: 152 10% 90%;
 
-    --muted: 234 16% 18%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 152 15% 20%;
+    --muted-foreground: 152 10% 60%;
 
-    --accent: 263 70% 55%;
+    --accent: 160 70% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 160 84% 39%;
+    --success: 160 84% 45%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 92% 50%;
+    --warning: 38 92% 55%;
     --warning-foreground: 0 0% 100%;
 
-    --border: 234 16% 20%;
-    --input: 234 16% 20%;
-    --ring: 239 84% 67%;
+    --border: 152 15% 25%;
+    --input: 152 15% 25%;
+    --ring: 160 84% 50%;
 
-    --yield-excellent: 160 84% 45%;
-    --yield-good: 142 71% 50%;
-    --yield-ok: 48 96% 58%;
-    --yield-weak: 38 92% 55%;
-    --yield-bad: 0 84% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(152, 20%, 10%) 0%, hsl(152, 20%, 8%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(160, 84%, 45%) 0%, hsl(160, 70%, 50%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(152, 20%, 12%) 0%, hsl(152, 20%, 10%) 100%);
 
-    --sidebar-background: 234 16% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 239 84% 67%;
+    --sidebar-background: 152 20% 10%;
+    --sidebar-foreground: 152 10% 95%;
+    --sidebar-primary: 160 84% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 234 16% 15%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 234 16% 20%;
-    --sidebar-ring: 239 84% 67%;
+    --sidebar-accent: 152 20% 15%;
+    --sidebar-accent-foreground: 152 10% 95%;
+    --sidebar-border: 152 15% 20%;
+    --sidebar-ring: 160 84% 50%;
   }
 }
 
@@ -118,44 +112,56 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
   }
 
-  .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
   }
 }
 
 @layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(239, 84%, 67%) 0%, hsl(263, 70%, 50%) 100%);
+    background: var(--gradient-primary);
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, hsl(239, 84%, 67%) 0%, hsl(263, 70%, 50%) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .gradient-card {
+    background: var(--gradient-card);
   }
 
-  .yield-excellent {
-    @apply bg-[hsl(var(--yield-excellent))] text-white;
+  .card-elevated {
+    @apply bg-card border border-border rounded-xl shadow-sm;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
   }
 
-  .yield-good {
-    @apply bg-[hsl(var(--yield-good))] text-white;
+  .card-elevated:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
   }
 
-  .yield-ok {
-    @apply bg-[hsl(var(--yield-ok))] text-black;
+  .input-field {
+    @apply w-full px-4 py-3 bg-background border border-input rounded-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent;
+    @apply transition-all duration-200;
   }
 
-  .yield-weak {
-    @apply bg-[hsl(var(--yield-weak))] text-black;
+  .result-badge {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium;
   }
 
-  .yield-bad {
-    @apply bg-[hsl(var(--yield-bad))] text-white;
+  .result-badge-success {
+    @apply result-badge bg-success/10 text-success;
+  }
+
+  .result-badge-warning {
+    @apply result-badge bg-warning/10 text-warning;
+  }
+
+  .result-badge-primary {
+    @apply result-badge bg-primary/10 text-primary;
   }
 }
